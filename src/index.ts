@@ -3,6 +3,7 @@ import helmet from "helmet";
 import cors from "cors";
 import compression from "compression";
 import morgan from "morgan";
+import config from "./configs";
 import defaultRoutes from "./routes";
 import errorHandler from "./middlewares/errors";
 
@@ -11,7 +12,6 @@ import type { Express } from "express";
 
 // App Init
 const app: Express = express();
-const port = process.env.PORT ?? 3000;
 
 // Middlewares
 app.use(helmet());
@@ -26,6 +26,6 @@ app.use("/", defaultRoutes);
 app.use(errorHandler);
 
 // Start Server
-app.listen(port, () => {
-	console.log(`\n🚀 [Express] - Server running on port ${port}\n`);
+app.listen(config.port, () => {
+	console.log(`\n🚀 [Express] - Server running on port ${String(config.port)}`);
 });
