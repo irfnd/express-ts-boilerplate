@@ -1,6 +1,6 @@
 import "dotenv/config";
 
-import { ConfigSchema } from "../utils/validations";
+import { ConfigSchema } from "../validations";
 
 const { PORT } = process.env;
 
