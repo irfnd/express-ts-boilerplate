@@ -1,8 +1,11 @@
 {
 	"name": "express-ts-boilerplate",
 	"version": "1.0.0",
+	"description": "A boilerplate/starter project for quickly building RESTful APIs using Express, Typescript and Prisma with some pre-built features.",
+	"author": "Irfnd <irfandiabimanyu@gmail.com>",
 	"main": "index.js",
 	"license": "MIT",
+	"private": false,
 	"scripts": {
 		"prepare": "husky install",
 		"build": "rimraf dist && yarn tsc",
