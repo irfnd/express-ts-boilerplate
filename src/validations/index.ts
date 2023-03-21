@@ -1,1 +1,1 @@
-export { default as ConfigSchema } from "./validation.config";
+export { default as ConfigSchema } from "@/validations/validation.config";

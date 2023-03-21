@@ -7,9 +7,11 @@
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"rootDir": "src",
+		"baseUrl": "src",
+		"paths": { "@/*": ["*"] },
 		"skipLibCheck": true,
-		"sourceMap": true,
 		"strict": true,
 		"target": "ES2022"
-	}
+	},
+	"ts-node": { "require": ["tsconfig-paths/register"] }
 }

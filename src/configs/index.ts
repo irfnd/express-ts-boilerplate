@@ -1,11 +1,12 @@
+import { ConfigSchema } from "@/validations";
 import "dotenv/config";
 
-import { ConfigSchema } from "../validations";
+const fromEnv = ConfigSchema.parse({
+	port: process.env.PORT ? Number(process.env.PORT) : undefined,
+});
 
-const { PORT } = process.env;
-
-const fromEnv = {
-	port: PORT ? Number(PORT) : undefined,
+const config = {
+	server: { port: fromEnv.port },
 };
 
-export default ConfigSchema.parse(fromEnv);
+export default config;

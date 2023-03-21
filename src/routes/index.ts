@@ -1,6 +1,6 @@
+import NotFoundRoutes from "@/routes/route.404";
+import IndexRoutes from "@/routes/route.index";
 import { Router } from "express";
-import IndexRoutes from "./route.index";
-import NotFoundRoutes from "./route.404";
 
 const router = Router();
 

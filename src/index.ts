@@ -1,11 +1,11 @@
+import config from "@/configs";
+import errorHandler from "@/middlewares/errors";
+import defaultRoutes from "@/routes";
+import compression from "compression";
+import cors from "cors";
 import express from "express";
 import helmet from "helmet";
-import cors from "cors";
-import compression from "compression";
 import morgan from "morgan";
-import config from "./configs";
-import defaultRoutes from "./routes";
-import errorHandler from "./middlewares/errors";
 
 // Types
 import type { Express } from "express";
@@ -26,6 +26,6 @@ app.use("/", defaultRoutes);
 app.use(errorHandler);
 
 // Start Server
-app.listen(config.port, () => {
-	console.log(`\n🚀 [Express] - Server running on port ${String(config.port)}`);
+app.listen(config.server.port, () => {
+	console.log(`\n🚀 [Express] - Server running on port ${String(config.server.port)}`);
 });

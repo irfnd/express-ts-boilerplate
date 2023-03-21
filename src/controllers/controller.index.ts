@@ -1,7 +1,7 @@
+import { resSuccess } from "@/utils/response";
 import httpStatus from "http-status";
-import { resSuccess } from "../utils/response";
 
-import type { Request, Response, NextFunction } from "express";
+import type { NextFunction, Request, Response } from "express";
 
 export const getIndex = (req: Request, res: Response, next: NextFunction): void => {
 	const results = {
